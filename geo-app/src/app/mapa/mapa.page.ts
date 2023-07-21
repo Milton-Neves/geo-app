@@ -28,11 +28,11 @@ export class MapaPage implements OnInit {
     });
   }
 
-  searchPlace(placeName: string) {
+  searchPlace(placeName: any) {
     TomTom.services.fuzzySearch({
       key: this.tomTomAPIKey,
       query: placeName,
-    }).go((result) => {
+    }).go((result: any) => {
       if (result && result.results && result.results.length > 0) {
         const position = result.results[0].position;
         this.map.setView(position, 15);
