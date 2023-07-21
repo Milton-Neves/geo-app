@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Mapa
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div #map id="map"></div>
+  <ion-item>
+    <ion-label position="floating">Buscar lugar</ion-label>
+    <ion-input (ionChange)="searchPlace($event.target.value)"></ion-input>
+  </ion-item>
+</ion-content>
